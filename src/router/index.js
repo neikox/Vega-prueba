@@ -5,13 +5,23 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/audits'
+      redirect: '/audits',
     },
     {
       path: '/audits',
       name: 'AuditList',
-      component: () => import('../views/AuditList.vue')
-    }
+      component: () => import('../views/AuditList.vue'),
+    },
+    {
+      path: '/audits/new',
+      name: 'AuditWizard',
+      component: () => import('../views/AuditWizard.vue'),
+    },
+    {
+      path: '/audits/:id',
+      name: 'AuditDetail',
+      component: () => import('../views/AuditDetail.vue'),
+    },
   ],
 })
 
