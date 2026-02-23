@@ -1,9 +1,10 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import AppLayout from './components/layout/MainLayout.vue'
 </script>
 
 <template>
-  <div id="app" class="min-h-screen bg-gray-50 p-8 md:p-4">
+  <AppLayout>
     <RouterView />
-  </div>
+  </AppLayout>
 </template>
