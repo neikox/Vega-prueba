@@ -83,10 +83,13 @@
         </div>
 
         <!-- Actions -->
-        <div v-if="check.status === 'PENDING'" class="flex items-center gap-2">
+        <div
+          v-if="check.status === 'PENDING'"
+          class="flex flex-col sm:flex-row sm:items-center gap-2"
+        >
           <button
             @click="$emit('execute', check.id)"
-            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-md transition-colors"
+            class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-md transition-colors w-full sm:w-auto"
           >
             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
@@ -107,7 +110,7 @@
 
           <button
             @click="$emit('mark-ok', check.id)"
-            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-md transition-colors"
+            class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-md transition-colors w-full sm:w-auto"
           >
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
               <path
@@ -119,7 +122,7 @@
 
           <button
             @click="$emit('mark-ko', check.id)"
-            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-red-700 bg-red-50 hover:bg-red-100 rounded-md transition-colors"
+            class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-red-700 bg-red-50 hover:bg-red-100 rounded-md transition-colors w-full sm:w-auto"
           >
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
               <path
